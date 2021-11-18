@@ -1,0 +1,3 @@
+queue_size: 1000
+topic_name: result
+service_name: calculate

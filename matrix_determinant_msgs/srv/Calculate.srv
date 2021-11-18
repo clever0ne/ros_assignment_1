@@ -1,0 +1,11 @@
+int32 m11
+int32 m12
+int32 m13
+int32 m21
+int32 m22
+int32 m23
+int32 m31
+int32 m32
+int32 m33
+---
+float32 detm

@@ -1,0 +1,14 @@
+#ifndef GLASS_BRIDGE_PLAYER_H
+#define GLASS_BRIDGE_PLAYER_H
+
+namespace glass_bridge
+{
+
+class GlassBridgePlayer
+{
+  
+};
+
+}
+
+#endif // GLASS_BRIDGE_PLAYER_H

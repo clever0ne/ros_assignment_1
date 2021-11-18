@@ -1,0 +1,7 @@
+<?xml version="1.0"?>
+<launch>
+  <arg name="pkg_name" default="squid_game" />
+  <node pkg="$(arg pkg_name)" type="$(arg pkg_name)" name="$(arg pkg_name)" output="screen" >
+    <rosparam file="$(dirname)/../config/$(arg pkg_name)_params.yaml" command="load" />
+  </node>
+</launch>

@@ -1,0 +1,4 @@
+string color
+uint32 number
+---
+string result

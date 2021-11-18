@@ -1,0 +1,4 @@
+queue_size: 1000
+bridge_size: 18
+topic_name: glass_bridge/result
+service_name: glass_bridge/step
