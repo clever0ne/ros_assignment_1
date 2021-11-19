@@ -32,7 +32,7 @@ SquidGameGlassBridge::SquidGameGlassBridge(ros::NodeHandle &node_handle)
   random_generator_ = std::mt19937(seed);
   distribution_ = std::uniform_int_distribution<std::mt19937::result_type>(0, 1);
 
-  generateRandomGlassBridge(either_tempered_glass_panels_);
+  generateRandomGlassBridge(tempered_glass_panels_);
 
   publisher_ = node_handle_.advertise<std_msgs::String>(topic_name_,
                                                         static_cast<uint32_t>(queue_size_));
@@ -45,7 +45,7 @@ SquidGameGlassBridge::SquidGameGlassBridge(ros::NodeHandle &node_handle)
 void SquidGameGlassBridge::start()
 {
   ROS_INFO("I want to play a game with you.");
-  printPath("generated path:", either_tempered_glass_panels_);
+  printPath("generated path:", tempered_glass_panels_);
   ros::spin();
 }
 
@@ -123,11 +123,11 @@ bool SquidGameGlassBridge::step(squid_game_msgs::Step::Request  &request,
 
   // Вывод эталонного и текущего маршрутов
   path += side;
-  printPath("generated path:", either_tempered_glass_panels_);
+  printPath("generated path:", tempered_glass_panels_);
   printPath("player's path:", path);
 
   // Проверка выбранной стороны
-  if (side == either_tempered_glass_panels_.substr(steps_counter, 1))
+  if (side == tempered_glass_panels_.substr(steps_counter, 1))
   {
     response.result = "move_next";
     steps_counter++;

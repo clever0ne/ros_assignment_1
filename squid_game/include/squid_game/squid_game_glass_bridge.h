@@ -44,7 +44,7 @@ private:
   int32_t bridge_size_;
   std::string topic_name_;
   std::string service_name_;
-  std::string either_tempered_glass_panels_;
+  std::string tempered_glass_panels_;
   std::mt19937 random_generator_;
   std::random_device random_device_;
   std::uniform_int_distribution<std::mt19937::result_type> distribution_;
